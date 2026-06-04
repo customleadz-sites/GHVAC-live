@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Giesbrecht HVAC | Augusta HVAC Repair & Service | (706) 826-0644</title>
+<meta name="description" content="Augusta's most trusted HVAC company. AC repair, replacement & emergency service. 187 reviews, 4.9 stars. Fast response. Free estimates. Call (706) 826-0644.">
+
+<link href="https://cdn.zenbooker.com/widget/latest/zenbooker.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+/* ===== VARIABLES ===== */
+:root {
+  --purple: #68202C;
+  --purple-hover: #541A24;
+  --purple-light: rgba(104,32,44,0.10);
+  --purple-on-dark: #E87585;  /* lighter version for use on dark backgrounds */
+  --navy: #0B2545;
+  --navy-mid: #134074;
+  --bg: #F5F7FA;
+  --bg-white: #FFFFFF;
+  --text: #1A202C;
+  --text-mid: #4A5568;
+  --text-light: #718096;
+  --gold: #F6AD55;
+  --border: #E2E8F0;
+  --shadow: 0 4px 24px rgba(11,37,69,0.08);
+  --shadow-lg: 0 16px 48px rgba(11,37,69,0.16);
+  --radius: 8px;
+  --radius-lg: 16px;
+}
+
+/* ===== RESET ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Barlow', sans-serif; font-weight: 400; color: var(--text); background: var(--bg); overflow-x: hidden; }
+img { max-width: 100%; height: auto; display: block; }
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+
+/* ===== UTILITY ===== */
+.container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+.container-wide { max-width: 1340px; margin: 0 auto; padding: 0 24px; }
+.section { padding: 80px 0; }
+
+/* ===== BUTTONS ===== */
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 13px 26px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700; font-size: 16px;
+  text-transform: uppercase; letter-spacing: 0.04em;
+  border-radius: var(--radius); border: none;
+  cursor: pointer; transition: all 0.2s ease;
+  line-height: 1; white-space: nowrap;
+}
+.btn-purple { background: var(--purple); color: white; box-shadow: 0 4px 14px rgba(108,61,176,0.28); }
+.btn-purple:hover { background: var(--purple-hover); transform: translateY(-2px); box-shadow: 0 8px 22px rgba(108,61,176,0.38); }
+.btn-navy { background: var(--navy); color: white; }
+.btn-navy:hover { background: var(--navy-mid); transform: translateY(-2px); }
+.btn-outline { background: transparent; color: var(--navy); border: 1.5px solid var(--border); }
+.btn-outline:hover { border-color: var(--purple); color: var(--purple); }
+.btn-ghost { background: transparent; color: white; border: 1.5px solid rgba(255,255,255,0.40); }
+.btn-ghost:hover { border-color: white; background: rgba(255,255,255,0.08); }
+.btn-white { background: white; color: var(--navy); }
+.btn-white:hover { background: #f0f4f8; transform: translateY(-2px); }
+
+/* ===== TAGS ===== */
+.tag {
+  display: inline-block;
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 600;
+  font-size: 11px; text-transform: uppercase; letter-spacing: 0.12em;
+  color: var(--purple); background: var(--purple-light);
+  padding: 4px 10px; border-radius: 4px; margin-bottom: 12px;
+}
+.tag-light { color: var(--gold); background: rgba(246,173,85,0.15); }
+
+/* ===== SECTION TEXT ===== */
+.section-title {
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 800;
+  font-size: clamp(30px, 5vw, 54px);
+  line-height: 1.0; text-transform: uppercase; color: var(--navy);
+}
+.section-title-light { color: white; }
+.section-sub {
+  font-size: 16px; color: var(--text-mid); line-height: 1.7;
+  max-width: 560px; margin-top: 14px; font-weight: 400;
+}
+.section-sub-light { color: rgba(255,255,255,0.70); }
+
+/* ===== SCROLL ANIMATIONS ===== */
+.fade-up { opacity: 0; transform: translateY(22px); transition: opacity 0.55s ease, transform 0.55s ease; }
+.fade-up.visible { opacity: 1; transform: translateY(0); }
+.d1{transition-delay:.08s} .d2{transition-delay:.16s} .d3{transition-delay:.24s}
+.d4{transition-delay:.32s} .d5{transition-delay:.40s} .d6{transition-delay:.48s}
+.d7{transition-delay:.56s} .d8{transition-delay:.64s}
+
+/* ===== TOP ANNOUNCE BAR ===== */
+.announce-bar {
+  background: var(--purple); color: white;
+  text-align: center; padding: 8px 16px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 600; font-size: 12px;
+  letter-spacing: 0.04em; text-transform: uppercase;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.announce-bar a { color: white; text-decoration: underline; font-weight: 700; }
+.announce-bar a:hover { opacity: 0.85; }
+
+/* ===== STICKY HEADER ===== */
+.site-top { position: sticky; top: 0; z-index: 1000; }
+.site-header {
+  background: white;
+  box-shadow: 0 2px 18px rgba(0,0,0,0.09);
+  padding: 0;
+}
+.header-inner {
+  display: flex; align-items: center;
+  justify-content: space-between; gap: 16px;
+  padding: 12px 0;
+}
+.header-logo { height: 44px; width: auto; object-fit: contain; flex-shrink: 0; }
+
+/* Desktop Nav */
+.site-nav { flex: 1; display: flex; justify-content: center; }
+.nav-links { display: flex; align-items: center; gap: 4px; }
+.nav-links a {
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 600;
+  font-size: 14px; text-transform: uppercase; letter-spacing: 0.07em;
+  color: var(--text-mid); padding: 6px 10px; border-radius: 6px;
+  transition: color 0.18s, background 0.18s;
+}
+.nav-links a:hover { color: var(--purple); background: var(--purple-light); }
+
+/* Header Actions */
+.header-actions { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+.header-phone-btn {
+  display: flex; align-items: center; gap: 7px;
+  background: var(--purple); color: white;
+  padding: 10px 16px; border-radius: var(--radius);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700; font-size: 15px; letter-spacing: 0.02em;
+  transition: all 0.2s ease;
+}
+.header-phone-btn:hover { background: var(--purple-hover); transform: translateY(-1px); }
+.header-phone-btn svg { width: 15px; height: 15px; flex-shrink: 0; }
+.header-book-btn {
+  display: flex; align-items: center; gap: 6px;
+  background: transparent; color: var(--navy);
+  padding: 9px 16px; border-radius: var(--radius);
+  border: 1.5px solid var(--border);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700; font-size: 14px;
+  text-transform: uppercase; letter-spacing: 0.04em;
+  transition: all 0.18s ease;
+}
+.header-book-btn:hover { border-color: var(--purple); color: var(--purple); }
+
+/* Hamburger */
+.hamburger {
+  display: none; flex-direction: column; justify-content: center;
+  align-items: center; gap: 5px; width: 38px; height: 38px;
+  background: none; border: none; cursor: pointer; padding: 4px;
+  border-radius: 6px; transition: background 0.18s;
+}
+.hamburger:hover { background: var(--bg); }
+.hamburger span { display: block; width: 22px; height: 2px; background: var(--navy); border-radius: 2px; transition: all 0.3s ease; }
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* Mobile Nav Dropdown */
+.mobile-nav { display: none; padding: 10px 0 14px; border-top: 1px solid var(--border); }
+.mobile-nav.open { display: block; }
+.mobile-nav ul { display: flex; flex-direction: column; gap: 1px; }
+.mobile-nav ul a {
+  display: flex; align-items: center; justify-content: space-between;
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 600;
+  font-size: 18px; text-transform: uppercase; letter-spacing: 0.05em;
+  color: var(--navy); padding: 11px 0; border-bottom: 1px solid var(--border);
+  transition: color 0.18s;
+}
+.mobile-nav ul a:hover { color: var(--purple); }
+.mobile-nav ul li:last-child a { border-bottom: none; }
+
+/* ===== HERO ===== */
+.hero {
+  position: relative; display: flex; align-items: center;
+  background: var(--navy); overflow: hidden; min-height: 90vh;
+  padding: 64px 0 60px;
+}
+.hero-bg-img {
+  position: absolute; inset: 0;
+  background-image: url('assets/service%20call.webp');
+  background-size: cover; background-position: center;
+  opacity: 0.30;
+  animation: slow-zoom 22s ease-in-out infinite alternate;
+}
+@keyframes slow-zoom { from { transform: scale(1.0); } to { transform: scale(1.07); } }
+.hero-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(110deg, rgba(11,37,69,0.82) 0%, rgba(11,37,69,0.68) 50%, rgba(11,37,69,0.50) 100%);
+}
+.hero-layout {
+  position: relative; z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 36px; align-items: center; width: 100%;
+}
+.hero-eyebrow {
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 600;
+  font-size: 13px; text-transform: uppercase; letter-spacing: 0.14em;
+  color: var(--gold); margin-bottom: 16px;
+  display: flex; align-items: center; gap: 10px;
+}
+.hero-eyebrow::before { content: ''; display: block; width: 30px; height: 2px; background: var(--gold); flex-shrink: 0; }
+.hero-h1 {
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 800;
+  font-size: clamp(44px, 7.5vw, 84px);
+  line-height: 0.96; color: white; text-transform: uppercase;
+  letter-spacing: -0.01em; margin-bottom: 20px;
+}
+.hero-h1 .hl { color: var(--purple-on-dark); }
+.hero-sub {
+  font-size: clamp(15px, 1.8vw, 17px); color: rgba(255,255,255,0.76);
+  line-height: 1.7; margin-bottom: 26px; max-width: 500px;
+}
+.hero-badges { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; }
+.hero-badge {
+  display: flex; align-items: center; gap: 6px;
+  padding: 7px 11px;
+  background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.13);
+  border-radius: 6px; font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 600; font-size: 12px; color: rgba(255,255,255,0.87);
+  text-transform: uppercase; letter-spacing: 0.06em;
+}
+.badge-stars { color: var(--gold); }
+.hero-cta-group { display: flex; flex-direction: column; gap: 12px; }
+.hero-cta-row { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; }
+.hero-cta-divider { font-family: 'Barlow Condensed', sans-serif; font-weight: 500; font-size: 12px; color: rgba(255,255,255,0.35); text-transform: uppercase; letter-spacing: 0.1em; }
+.hero-urgency {
+  display: flex; align-items: center; gap: 7px;
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 600;
+  font-size: 13px; color: rgba(255,255,255,0.60); text-transform: uppercase; letter-spacing: 0.06em;
+}
+.urgency-dot { width: 7px; height: 7px; border-radius: 50%; background: #4ade80; box-shadow: 0 0 0 2px rgba(74,222,128,0.3); animation: pulse-dot 2s infinite; flex-shrink: 0; }
+@keyframes pulse-dot { 0%,100%{box-shadow:0 0 0 2px rgba(74,222,128,0.3)} 50%{box-shadow:0 0 0 5px rgba(74,222,128,0.15)} }
+
+/* Hero Form Card */
+.hero-form-card {
+  background: white; border-radius: var(--radius-lg);
+  overflow: hidden; box-shadow: 0 24px 60px rgba(0,0,0,0.30);
+}
+.hero-form-head {
+  background: var(--purple); padding: 16px 20px;
+}
+.hero-form-head h3 {
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 700;
+  font-size: 18px; text-transform: uppercase; color: white; margin-bottom: 2px;
+}
+.hero-form-head p { font-size: 13px; color: rgba(255,255,255,0.72); }
+.hero-form-head strong { color: var(--gold); }
+
+/* ===== TRUST BAR ===== */
+.trust-bar {
+  background: white; border-bottom: 3px solid var(--purple);
+  box-shadow: 0 4px 14px rgba(11,37,69,0.07);
+}
+.trust-stats {
+  display: flex; align-items: stretch;
+  justify-content: stretch;
+  border-left: 1px solid var(--border);
+}
+.trust-stat {
+  flex: 1; display: flex; align-items: center; gap: 10px;
+  padding: 16px 14px; border-right: 1px solid var(--border);
+}
+.t-icon {
+  width: 36px; height: 36px; min-width: 36px;
+  background: var(--purple-light); border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+}
+.t-icon svg { width: 18px; height: 18px; fill: var(--purple); }
+.t-text strong {
+  display: block; font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700; font-size: 14px; text-transform: uppercase; color: var(--navy); line-height: 1.15;
+}
+.t-text span { font-size: 11px; color: var(--text-light); }
+
+/* ===== PROBLEM SECTION ===== */
+.problem-section { background: var(--bg); }
+.problem-grid {
+  display: grid; grid-template-columns: repeat(2, 1fr);
+  gap: 18px; margin-top: 44px;
+}
+.prob-card {
+  background: white; border-radius: var(--radius-lg);
+  padding: 26px 22px; border: 1px solid var(--border);
+  transition: all 0.25s ease; position: relative; overflow: hidden;
+  display: flex; gap: 16px; align-items: flex-start;
+}
+.prob-card::before {
+  content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px;
+  background: var(--purple); transform: scaleY(0); transition: transform 0.25s ease; transform-origin: bottom;
+}
+.prob-card:hover::before { transform: scaleY(1); }
+.prob-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+.prob-icon { width: 44px; height: 44px; min-width: 44px; background: var(--purple-light); border-radius: 10px; display: flex; align-items: center; justify-content: center; }
+.prob-icon svg { width: 22px; height: 22px; stroke: var(--purple); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.prob-card h3 { font-family: 'Barlow Condensed', sans-serif; font-size: 18px; font-weight: 700; text-transform: uppercase; color: var(--navy); margin-bottom: 7px; }
+.prob-card p { font-size: 14px; color: var(--text-mid); line-height: 1.65; }
+
+/* ===== SERVICES ===== */
+.services-section { background: var(--navy); }
+.services-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 16px; margin-top: 44px;
+}
+.svc-card {
+  background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius-lg); padding: 24px 20px; transition: all 0.25s ease;
+}
+.svc-card:hover { background: rgba(255,255,255,0.09); border-color: rgba(108,61,176,0.50); transform: translateY(-4px); }
+.svc-icon { width: 44px; height: 44px; background: var(--purple); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 14px; }
+.svc-icon svg { width: 22px; height: 22px; stroke: white; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.svc-card h3 { font-family: 'Barlow Condensed', sans-serif; font-size: 17px; font-weight: 700; text-transform: uppercase; color: white; margin-bottom: 6px; }
+.svc-card p { font-size: 13px; color: rgba(255,255,255,0.54); line-height: 1.6; }
+
+/* ===== WHY US ===== */
+.why-section { background: white; }
+.why-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+.why-img-wrap { position: relative; }
+.why-img { width: 100%; height: 500px; object-fit: cover; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); }
+.why-badge { position: absolute; bottom: -20px; right: -20px; background: var(--purple); color: white; border-radius: var(--radius-lg); padding: 20px 22px; box-shadow: 0 10px 30px rgba(108,61,176,0.35); text-align: center; min-width: 130px; }
+.why-badge-num { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 48px; line-height: 1; display: block; }
+.why-badge-label { font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; color: rgba(255,255,255,0.85); display: block; margin-top: 4px; }
+.why-feats { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 28px; }
+.why-feat { display: flex; gap: 12px; }
+.wf-icon { width: 36px; height: 36px; min-width: 36px; background: var(--purple-light); border-radius: 9px; display: flex; align-items: center; justify-content: center; }
+.wf-icon svg { width: 17px; height: 17px; stroke: var(--purple); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.wf-text strong { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 14px; text-transform: uppercase; color: var(--navy); display: block; margin-bottom: 3px; }
+.wf-text span { font-size: 13px; color: var(--text-mid); line-height: 1.55; }
+.why-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 28px; }
+
+/* ===== GALLERY ===== */
+.gallery-section { background: var(--bg); }
+.gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); grid-auto-rows: 220px; gap: 10px; margin-top: 36px; }
+.gal-item { overflow: hidden; border-radius: var(--radius); }
+.gal-item.tall { grid-row: span 2; }
+.gal-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
+.gal-item:hover img { transform: scale(1.04); }
+
+/* ===== REVIEWS ===== */
+.reviews-section { background: white; }
+.reviews-top { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 40px; flex-wrap: wrap; gap: 20px; }
+.reviews-score { display: flex; align-items: center; gap: 14px; }
+.reviews-big { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 76px; line-height: 1; color: var(--navy); }
+.reviews-meta .stars { color: var(--gold); font-size: 22px; letter-spacing: 2px; display: block; margin-bottom: 3px; }
+.reviews-meta span { font-size: 13px; color: var(--text-light); }
+.reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.rev-card { background: var(--bg); border-radius: var(--radius-lg); padding: 24px; border: 1px solid var(--border); position: relative; transition: all 0.25s ease; }
+.rev-card:hover { box-shadow: var(--shadow); transform: translateY(-3px); }
+.rev-stars { color: var(--gold); font-size: 15px; letter-spacing: 2px; margin-bottom: 12px; }
+.rev-text { font-size: 14px; line-height: 1.72; color: var(--text-mid); margin-bottom: 18px; font-style: italic; }
+.rev-author { display: flex; align-items: center; gap: 10px; }
+.rev-avatar { width: 36px; height: 36px; background: var(--purple); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 13px; color: white; flex-shrink: 0; }
+.rev-info strong { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 14px; text-transform: uppercase; color: var(--navy); display: block; }
+.rev-info span { font-size: 11px; color: var(--text-light); }
+.g-mark { position: absolute; top: 16px; right: 16px; opacity: 0.28; }
+.g-mark svg { width: 18px; height: 18px; }
+
+/* ===== CONVERSION BANNER ===== */
+.conv-banner { background: var(--purple); padding: 56px 0; }
+.conv-banner-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 28px; }
+.conv-banner h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: clamp(28px, 4vw, 46px); text-transform: uppercase; color: white; line-height: 1.05; }
+.conv-banner p { font-size: 16px; color: rgba(255,255,255,0.75); margin-top: 8px; }
+.conv-banner-actions { display: flex; gap: 12px; flex-wrap: wrap; flex-shrink: 0; }
+
+/* ===== PROCESS ===== */
+.process-section { background: linear-gradient(135deg, var(--navy) 0%, #0e3460 100%); }
+.process-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 36px; margin-top: 52px; position: relative; }
+.process-steps::before { content: ''; position: absolute; top: 37px; left: calc(16.67% + 18px); right: calc(16.67% + 18px); height: 1px; background: rgba(255,255,255,0.12); }
+.proc-step { text-align: center; }
+.proc-num { width: 74px; height: 74px; border-radius: 50%; background: var(--purple); color: white; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 28px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; position: relative; z-index: 1; box-shadow: 0 8px 22px rgba(108,61,176,0.38); }
+.proc-step h3 { font-family: 'Barlow Condensed', sans-serif; font-size: 20px; font-weight: 700; text-transform: uppercase; color: white; margin-bottom: 8px; }
+.proc-step p { font-size: 14px; color: rgba(255,255,255,0.62); line-height: 1.65; }
+
+/* ===== CERTIFICATIONS ===== */
+.certs-section { background: var(--bg); padding: 58px 0; }
+.certs-row { display: flex; align-items: center; gap: 52px; flex-wrap: wrap; }
+.certs-copy { flex: 1; min-width: 260px; }
+.certs-img-wrap { flex: 2; min-width: 280px; }
+.certs-img { max-height: 120px; width: auto; }
+
+/* ===== FAQ ===== */
+.faq-section { background: white; }
+.faq-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 44px; align-items: start; margin-top: 44px; }
+.faq-list { display: flex; flex-direction: column; gap: 8px; }
+.faq-item { background: var(--bg); border-radius: var(--radius); border: 1px solid var(--border); overflow: hidden; transition: box-shadow 0.22s; }
+.faq-item:hover { box-shadow: var(--shadow); }
+.faq-q { width: 100%; display: flex; align-items: center; justify-content: space-between; padding: 16px 18px; background: none; border: none; cursor: pointer; text-align: left; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 16px; text-transform: uppercase; color: var(--navy); transition: color 0.18s; gap: 10px; }
+.faq-q:hover { color: var(--purple); }
+.faq-chevron { width: 16px; height: 16px; min-width: 16px; stroke: currentColor; fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; transition: transform 0.28s; }
+.faq-item.open .faq-q { color: var(--purple); }
+.faq-item.open .faq-chevron { transform: rotate(180deg); }
+.faq-a { max-height: 0; overflow: hidden; transition: max-height 0.35s ease, padding 0.3s ease; padding: 0 18px; }
+.faq-item.open .faq-a { max-height: 280px; padding: 0 18px 16px; }
+.faq-a p { font-size: 14px; color: var(--text-mid); line-height: 1.7; }
+.faq-cta { background: var(--navy); border-radius: var(--radius-lg); padding: 34px 28px; display: flex; flex-direction: column; gap: 14px; }
+.faq-cta h3 { font-family: 'Barlow Condensed', sans-serif; font-size: 28px; font-weight: 700; text-transform: uppercase; color: white; line-height: 1.05; }
+.faq-cta p { font-size: 14px; color: rgba(255,255,255,0.64); line-height: 1.65; }
+.faq-tel { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 28px; color: var(--gold); }
+.faq-cta .btn { width: 100%; justify-content: center; }
+
+/* ===== BOOKING ===== */
+.booking-section { background: var(--bg-white); }
+.booking-header { text-align: center; margin-bottom: 40px; }
+.booking-header .section-sub { margin: 12px auto 0; }
+
+/* ===== FOOTER ===== */
+.site-footer { background: #06131F; padding: 56px 0 0; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; padding-bottom: 48px; border-bottom: 1px solid rgba(255,255,255,0.07); }
+.footer-logo { height: 42px; width: auto; margin-bottom: 14px; }
+.footer-desc { font-size: 14px; color: rgba(255,255,255,0.44); line-height: 1.72; max-width: 280px; margin-bottom: 20px; }
+.footer-tel { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 22px; color: var(--gold); display: block; margin-bottom: 2px; }
+.footer-tel-lbl { font-size: 11px; color: rgba(255,255,255,0.34); text-transform: uppercase; letter-spacing: 0.1em; }
+.footer-col h4 { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em; color: white; margin-bottom: 14px; }
+.footer-col ul { display: flex; flex-direction: column; gap: 8px; }
+.footer-col ul li a { font-size: 13px; color: rgba(255,255,255,0.45); transition: color 0.2s; }
+.footer-col ul li a:hover { color: var(--gold); }
+.footer-bottom { padding: 18px 0; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.footer-bottom span { font-size: 12px; color: rgba(255,255,255,0.27); }
+
+/* ===== MOBILE STICKY BAR ===== */
+.mobile-bar { display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 999; background: var(--navy); padding: 10px 12px; gap: 8px; box-shadow: 0 -4px 20px rgba(0,0,0,0.3); border-top: 2px solid var(--purple); }
+.mobile-bar a { flex: 1; display: flex; align-items: center; justify-content: center; gap: 6px; padding: 14px 10px; border-radius: 7px; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 17px; text-transform: uppercase; letter-spacing: 0.03em; line-height: 1; }
+.mb-call { background: var(--purple); color: white; }
+.mb-book { background: rgba(255,255,255,0.09); color: white; border: 1px solid rgba(255,255,255,0.20); }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1100px) {
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .why-layout { grid-template-columns: 1fr; gap: 40px; }
+  .why-img-wrap { order: -1; }
+  .why-img { height: 380px; }
+  .why-badge { bottom: -16px; right: -12px; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 900px) {
+  .site-nav { display: none; }
+  .hamburger { display: flex; }
+  .hero-layout { grid-template-columns: 1fr; }
+  .hero-form-card { display: none; }
+  .hero { min-height: auto; padding: 40px 0 52px; }
+  .trust-stats { flex-wrap: wrap; }
+  .trust-stat { flex: none; width: 50%; }
+  .trust-stat:nth-child(5) { width: 50%; }
+}
+@media (max-width: 600px) {
+  .trust-stats { flex-direction: column; border-left: none; }
+  .trust-stat { width: 100%; border-right: none; border-bottom: 1px solid var(--border); }
+  .trust-stat:last-child { border-bottom: none; }
+}
+@media (max-width: 768px) {
+  .section { padding: 56px 0; }
+  .header-book-btn { display: none; }
+  .hero-h1 { font-size: clamp(36px, 10vw, 58px); }
+  .hero-cta-row { flex-direction: column; align-items: flex-start; }
+  .problem-grid { grid-template-columns: 1fr; }
+  .services-grid { grid-template-columns: 1fr 1fr; }
+  .gallery-grid { grid-template-columns: 1fr 1fr; grid-auto-rows: 160px; }
+  .gal-item.tall { grid-row: span 1; }
+  .reviews-grid { grid-template-columns: 1fr; }
+  .reviews-top { flex-direction: column; align-items: flex-start; }
+  .process-steps { grid-template-columns: 1fr; gap: 24px; }
+  .process-steps::before { display: none; }
+  .why-feats { grid-template-columns: 1fr; }
+  .faq-layout { grid-template-columns: 1fr; }
+  .faq-cta { order: -1; }
+  .conv-banner-inner { flex-direction: column; align-items: flex-start; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .mobile-bar { display: flex; }
+  body { padding-bottom: 66px; }
+}
+@media (max-width: 540px) {
+  .services-grid { grid-template-columns: 1fr; }
+  .gallery-grid { grid-template-columns: 1fr; grid-auto-rows: 200px; }
+  .certs-row { flex-direction: column; }
+  .header-actions { gap: 6px; }
+  .header-phone-btn { font-size: 13px; padding: 9px 12px; }
+  .trust-stat { width: 100%; }
+}
+</style>
+</head>
+<body>
+
+<!-- ====================================================
+     ANNOUNCE BAR
+===================================================== -->
+<div class="announce-bar">
+  ⚡ Same-Day Service Available in Augusta, GA &mdash; <a href="tel:7068260644">(706) 826-0644</a>
+</div>
+
+
+<!-- ====================================================
+     STICKY HEADER
+===================================================== -->
+<div class="site-top">
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+
+        <a href="#hero"><img src="assets/logo%20transparent%20background%20.png" alt="Giesbrecht HVAC" class="header-logo"></a>
+
+        <nav class="site-nav">
+          <ul class="nav-links">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#process">Process</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+          <a href="#booking" class="header-book-btn">Book Online</a>
+          <a href="tel:7068260644" class="header-phone-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.93a16 16 0 0 0 5.52 5.52l1.82-1.82a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.02z"/></svg>
+            (706) 826-0644
+          </a>
+          <button class="hamburger" aria-label="Open menu" onclick="toggleNav()">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Mobile nav -->
+      <nav class="mobile-nav" id="mobileNav">
+        <ul>
+          <li><a href="#services" onclick="closeNav()">Services <span>&rsaquo;</span></a></li>
+          <li><a href="#about" onclick="closeNav()">About Us <span>&rsaquo;</span></a></li>
+          <li><a href="#process" onclick="closeNav()">Process <span>&rsaquo;</span></a></li>
+          <li><a href="#reviews" onclick="closeNav()">Reviews <span>&rsaquo;</span></a></li>
+          <li><a href="#faq" onclick="closeNav()">FAQ <span>&rsaquo;</span></a></li>
+          <li><a href="#booking" onclick="closeNav()">Book Online <span>&rsaquo;</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+</div>
+
+
+<!-- ====================================================
+     HERO
+===================================================== -->
+<section class="hero" id="hero">
+  <div class="hero-bg-img"></div>
+  <div class="hero-overlay"></div>
+  <div class="container">
+    <div class="hero-layout">
+
+      <!-- Left: Content -->
+      <div class="hero-content">
+        <div class="hero-eyebrow fade-up">Serving Augusta, GA &amp; Surrounding Areas</div>
+        <h1 class="hero-h1 fade-up d1">
+          Augusta's<br>
+          Most Trusted<br>
+          <span class="hl">HVAC</span> Company
+        </h1>
+        <p class="hero-sub fade-up d2">When your AC fails in the Georgia heat, you need a team that shows up fast, fixes it right, and charges a fair price. That's what 187 Augusta homeowners found.</p>
+        <div class="hero-badges fade-up d3">
+          <div class="hero-badge"><span class="badge-stars">★★★★★</span>&nbsp;4.9 Stars — 187 Reviews</div>
+          <div class="hero-badge">⚡ Same-Day Response</div>
+          <div class="hero-badge">✓ Free Estimates</div>
+          <div class="hero-badge">🛡 Licensed &amp; Insured</div>
+        </div>
+        <div class="hero-cta-group fade-up d4">
+          <div class="hero-cta-row">
+            <a href="tel:7068260644" class="btn btn-purple" style="font-size:18px;padding:16px 28px;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.93a16 16 0 0 0 5.52 5.52l1.82-1.82a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.02z"/></svg>
+              (706) 826-0644
+            </a>
+            <span class="hero-cta-divider">or</span>
+            <a href="#booking" class="btn btn-ghost" style="font-size:16px;">Book Online &rarr;</a>
+          </div>
+          <div class="hero-urgency">
+            <span class="urgency-dot"></span>
+            Currently accepting new appointments in Augusta
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Booking Form -->
+      <div class="hero-form-card fade-up d2">
+        <div class="hero-form-head">
+          <h3>Schedule Your Service</h3>
+          <p>Or call us directly: <strong>(706) 826-0644</strong></p>
+        </div>
+        <div class="zenbooker-inline-widget" data-url="https://widget.zenbooker.com/book/1722876415943x452936215138230600?embed=true" style="min-width:280px;height:480px;border:0;vertical-align:bottom;border-radius:0 0 16px 16px;display:block;"></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ====================================================
+     TRUST BAR
+===================================================== -->
+<div class="trust-bar">
+  <div class="container">
+    <div class="trust-stats">
+      <div class="trust-stat">
+        <div class="t-icon"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+        <div class="t-text"><strong>4.9 Stars</strong><span>187 Google Reviews</span></div>
+      </div>
+      <div class="trust-stat">
+        <div class="t-icon"><svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+        <div class="t-text"><strong>Same-Day Service</strong><span>Fast Response Times</span></div>
+      </div>
+      <div class="trust-stat">
+        <div class="t-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <div class="t-text"><strong>Licensed &amp; Insured</strong><span>Certified Technicians</span></div>
+      </div>
+      <div class="trust-stat">
+        <div class="t-icon"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+        <div class="t-text"><strong>Free Estimates</strong><span>On New Installations</span></div>
+      </div>
+      <div class="trust-stat">
+        <div class="t-icon"><svg viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div>
+        <div class="t-text"><strong style="white-space:nowrap;">Augusta &amp; Surrounding</strong><span style="white-space:nowrap;font-size:10px;">Evans · Martinez · Grovetown · N. Augusta</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ====================================================
+     PROBLEM SECTION
+===================================================== -->
+<section class="problem-section section" id="problems">
+  <div class="container">
+    <div class="fade-up">
+      <div class="tag">Sound Familiar?</div>
+      <h2 class="section-title">Augusta Summers Are Brutal.<br>Your HVAC Shouldn't Make It Worse.</h2>
+      <p class="section-sub">These are the problems Augusta homeowners call us about most.</p>
+    </div>
+    <div class="problem-grid">
+      <div class="prob-card fade-up d1">
+        <div class="prob-icon"><svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+        <div>
+          <h3>Sky-High Energy Bills</h3>
+          <p>If your bill keeps climbing, your system is working harder than it should. We find the inefficiency and fix it for good.</p>
+        </div>
+      </div>
+      <div class="prob-card fade-up d2">
+        <div class="prob-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <div>
+          <h3>Worried About Response Time?</h3>
+          <p>When your AC goes out, you need help fast. We answer the phone and show up when we say we will — every time.</p>
+        </div>
+      </div>
+      <div class="prob-card fade-up d3">
+        <div class="prob-icon"><svg viewBox="0 0 24 24"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg></div>
+        <div>
+          <h3>AC Not Keeping Up</h3>
+          <p>When it's 95°F outside and your system can't keep up, you need more than a quick fix — you need a real solution.</p>
+        </div>
+      </div>
+      <div class="prob-card fade-up d4">
+        <div class="prob-icon"><svg viewBox="0 0 24 24"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg></div>
+        <div>
+          <h3>Indoor Humidity Problems</h3>
+          <p>Your home should stay between 45–55% humidity. Too high or low affects comfort, health, and your home's structure.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ====================================================
+     SERVICES
+===================================================== -->
+<section class="services-section section" id="services">
+  <div class="container">
+    <div class="fade-up">
+      <div class="tag tag-light">What We Do</div>
+      <h2 class="section-title section-title-light">Full-Service HVAC Solutions<br>in Augusta, GA</h2>
+      <p class="section-sub section-sub-light">From emergency repairs to full system replacements, we handle everything.</p>
+    </div>
+    <div class="services-grid">
+      <div class="svc-card fade-up d1">
+        <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg></div>
+        <h3>AC Repair</h3>
+        <p>Fast diagnosis and repair for all makes and models. We fix it right the first time.</p>
+      </div>
+      <div class="svc-card fade-up d2">
+        <div class="svc-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+        <h3>AC Replacement &amp; New Installs</h3>
+        <p>Upgrade to a high-efficiency system. Free estimates on every new installation.</p>
+      </div>
+      <div class="svc-card fade-up d3">
+        <div class="svc-icon"><svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+        <h3>Emergency HVAC Service</h3>
+        <p>HVAC failures don't keep business hours. When you need us most, we're there.</p>
+      </div>
+      <div class="svc-card fade-up d4">
+        <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 01-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 002.5 2.5z"/></svg></div>
+        <h3>Furnace Repair &amp; Replacement</h3>
+        <p>Keep your home warm when it matters. We service and replace all furnace types.</p>
+      </div>
+      <div class="svc-card fade-up d5">
+        <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M2 12h20M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10"/><path d="M8 12a4 4 0 018 0"/></svg></div>
+        <h3>Indoor Air Quality</h3>
+        <p>Cleaner air, better breathing. Filtration, UV lights, and purification systems.</p>
+      </div>
+      <div class="svc-card fade-up d6">
+        <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg></div>
+        <h3>Humidity Control</h3>
+        <p>Whole-home dehumidifiers and humidifiers to keep your home at 45–55%.</p>
+      </div>
+      <div class="svc-card fade-up d7">
+        <div class="svc-icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+        <h3>Ductwork Services</h3>
+        <p>Leaky ducts waste money. We seal, repair, and replace ductwork the right way.</p>
+      </div>
+      <div class="svc-card fade-up d8">
+        <div class="svc-icon"><svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
+        <h3>Energy Audits</h3>
+        <p>Find exactly where your home loses efficiency and lower those bills for good.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ====================================================
+     WHY GIESBRECHT HVAC
+===================================================== -->
+<section class="why-section section" id="about">
+  <div class="container">
+    <div class="why-layout">
+      <div class="why-img-wrap fade-up">
+        <img src="assets/employees.webp" alt="Giesbrecht HVAC team" class="why-img">
+        <div class="why-badge">
+          <span class="why-badge-num">4.9</span>
+          <span class="why-badge-label">★ Star Rating<br>187 Reviews</span>
+        </div>
+      </div>
+      <div class="fade-up d2">
+        <div class="tag">Why Choose Us</div>
+        <h2 class="section-title">Augusta Homeowners<br>Trust Giesbrecht HVAC</h2>
+        <p class="section-sub">We're not a call center. We're a local HVAC company that picks up the phone, shows up on time, and stands behind every job.</p>
+        <div class="why-feats">
+          <div class="why-feat">
+            <div class="wf-icon"><svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+            <div class="wf-text"><strong>Fast Response</strong><span>We answer when you call and show up quickly — waiting isn't an option in Augusta heat.</span></div>
+          </div>
+          <div class="why-feat">
+            <div class="wf-icon"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+            <div class="wf-text"><strong>Free Estimates</strong><span>No hidden fees on new system quotes. Know the full cost before work begins.</span></div>
+          </div>
+          <div class="why-feat">
+            <div class="wf-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <div class="wf-text"><strong>Licensed &amp; Insured</strong><span>Certified technicians who stand behind their work on every single job.</span></div>
+          </div>
+          <div class="why-feat">
+            <div class="wf-icon"><svg viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div>
+            <div class="wf-text"><strong>Locally Rooted</strong><span>Proudly serving Augusta, Evans, Martinez, Grovetown, and North Augusta.</span></div>
+          </div>
+        </div>
+        <div class="why-actions">
+          <a href="tel:7068260644" class="btn btn-purple">(706) 826-0644</a>
+          <a href="#booking" class="btn btn-navy">Book Online &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ====================================================
+     PHOTO GALLERY
+===================================================== -->
+<section class="gallery-section section" id="gallery">
+  <div class="container">
+    <div class="fade-up" style="text-align:center;max-width:560px;margin:0 auto;">
+      <div class="tag">Our Work</div>
+      <h2 class="section-title">Real Jobs. Real Results.<br>Right Here in Augusta.</h2>
+    </div>
+  </div>
+  <div class="container-wide">
+    <div class="gallery-grid">
+      <div class="gal-item tall fade-up d1"><img src="assets/service%20call.webp" alt="HVAC service call Augusta GA"></div>
+      <div class="gal-item fade-up d2"><img src="assets/ac-repair.jpg" alt="AC repair Augusta GA"></div>
+      <div class="gal-item fade-up d3"><img src="assets/indoor-service.jpg" alt="Indoor HVAC service Augusta"></div>
+      <div class="gal-item fade-up d2"><img src="assets/filter-service.jpg" alt="HVAC filter service Augusta"></div>
+      <div class="gal-item fade-up d3"><img src="assets/service%20call%202.webp" alt="HVAC technician Augusta GA"></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ====================================================
+     REVIEWS
+===================================================== -->
+<section class="reviews-section section" id="reviews">
+  <div class="container">
+    <div class="reviews-top fade-up">
+      <div>
+        <div class="tag">What Customers Say</div>
+        <h2 class="section-title">187 Reasons Augusta<br>Trusts Giesbrecht HVAC</h2>
+      </div>
+      <div class="reviews-score">
+        <div class="reviews-big">4.9</div>
+        <div class="reviews-meta">
+          <span class="stars">★★★★★</span>
+          <span>Based on 187 Google Reviews</span>
+        </div>
+      </div>
+    </div>
+    <div class="reviews-grid">
+      <div class="rev-card fade-up d1">
+        <div class="rev-stars">★★★★★</div>
+        <p class="rev-text">"Called on a Saturday afternoon when our AC went out completely. They had a tech at our house within two hours. Incredibly professional, diagnosed the issue quickly, and the price was fair and upfront. Will never use another HVAC company in Augusta."</p>
+        <div class="rev-author">
+          <div class="rev-avatar">JT</div>
+          <div class="rev-info"><strong>James T.</strong><span>Martinez, GA &middot; Google Review</span></div>
+        </div>
+        <div class="g-mark"><svg viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg></div>
+      </div>
+      <div class="rev-card fade-up d2">
+        <div class="rev-stars">★★★★★</div>
+        <p class="rev-text">"Giesbrecht replaced our entire HVAC system last spring. The team was clean, respectful, and walked us through every part of the install. Our energy bills dropped noticeably the very first month. Couldn't be happier with the result."</p>
+        <div class="rev-author">
+          <div class="rev-avatar">MR</div>
+          <div class="rev-info"><strong>Michelle R.</strong><span>Evans, GA &middot; Google Review</span></div>
+        </div>
+        <div class="g-mark"><svg viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg></div>
+      </div>
+      <div class="rev-card fade-up d3">
+        <div class="rev-stars">★★★★★</div>
+        <p class="rev-text">"After years struggling with high humidity in our home, they installed a whole-home dehumidifier. The difference has been incredible. Highly recommend asking about their indoor air quality services — complete game changer."</p>
+        <div class="rev-author">
+          <div class="rev-avatar">DK</div>
+          <div class="rev-info"><strong>David K.</strong><span>Augusta, GA &middot; Google Review</span></div>
+        </div>
+        <div class="g-mark"><svg viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ====================================================
+     CONVERSION BANNER
+===================================================== -->
+<div class="conv-banner">
+  <div class="container">
+    <div class="conv-banner-inner fade-up">
+      <div>
+        <h2>Don't Wait in the Heat.<br>Augusta's HVAC Experts Are Standing By.</h2>
+        <p>Same-day appointments available. No pressure quotes. Just honest, fast service.</p>
+      </div>
+      <div class="conv-banner-actions">
+        <a href="tel:7068260644" class="btn btn-white" style="font-size:17px;padding:16px 28px;">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.93a16 16 0 0 0 5.52 5.52l1.82-1.82a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.02z"/></svg>
+          (706) 826-0644
+        </a>
+        <a href="#booking" class="btn btn-ghost" style="font-size:17px;padding:16px 28px;">Book Online &rarr;</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ====================================================
+     HOW IT WORKS
+===================================================== -->
+<section class="process-section section" id="process">
+  <div class="container">
+    <div class="fade-up" style="text-align:center;">
+      <div class="tag tag-light">How It Works</div>
+      <h2 class="section-title section-title-light">Getting Help Is Simple.</h2>
+      <p class="section-sub section-sub-light" style="margin:12px auto 0;">No runaround. No mystery pricing. Just real help, fast.</p>
+    </div>
+    <div class="process-steps">
+      <div class="proc-step fade-up d1">
+        <div class="proc-num">1</div>
+        <h3>Call or Book Online</h3>
+        <p>Reach us at (706) 826-0644 or use the booking form. We're available 7 days a week and actually answer when you call.</p>
+      </div>
+      <div class="proc-step fade-up d2">
+        <div class="proc-num">2</div>
+        <h3>We Schedule Fast</h3>
+        <p>Tell us what's going on and we'll dispatch a certified tech to you — same day when available.</p>
+      </div>
+      <div class="proc-step fade-up d3">
+        <div class="proc-num">3</div>
+        <h3>Fixed &amp; Done Right</h3>
+        <p>We diagnose, explain the issue clearly, and fix it with transparent pricing. You know the cost before we start.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ====================================================
+     CERTIFICATIONS
+===================================================== -->
+<section class="certs-section" id="certifications">
+  <div class="container">
+    <div class="certs-row">
+      <div class="certs-copy fade-up">
+        <div class="tag">Credentials</div>
+        <h2 class="section-title" style="font-size:clamp(26px,4vw,42px);">Certified, Licensed<br>&amp; Trusted in Augusta</h2>
+        <p class="section-sub" style="font-size:15px;">Our certifications reflect the training and standards we hold ourselves to on every job.</p>
+      </div>
+      <div class="certs-img-wrap fade-up d2">
+        <img src="assets/certifications.png" alt="Giesbrecht HVAC certifications" class="certs-img">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ====================================================
+     FAQ
+===================================================== -->
+<section class="faq-section section" id="faq">
+  <div class="container">
+    <div class="fade-up" style="text-align:center;max-width:560px;margin:0 auto;">
+      <div class="tag">Got Questions?</div>
+      <h2 class="section-title">Common Questions From<br>Augusta Homeowners</h2>
+    </div>
+    <div class="faq-layout">
+      <div class="faq-list fade-up d1">
+        <div class="faq-item">
+          <button class="faq-q">How quickly can you respond to an HVAC emergency?<svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-a"><p>We prioritize emergency calls and work hard to provide same-day service. When you call, we give you an honest ETA. Fast response time is one of the top reasons Augusta homeowners trust us and leave 5-star reviews.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">What should I set my thermostat to in Augusta summers?<svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-a"><p>Most energy experts recommend 78°F when you're home and 82–85°F when away. Every degree you raise saves roughly 3% on cooling costs. If your system struggles to reach your set temperature, that's a sign it needs service.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Why are my energy bills so high?<svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-a"><p>High bills usually point to a dirty or aging system, leaky ductwork, or a refrigerant issue. Our energy audit service pinpoints exactly where you're losing efficiency and gives you a clear plan to fix it.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">What humidity level should I maintain indoors?<svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-a"><p>The ideal indoor humidity range is 45–55%. Below 40% causes dry air and wood damage. Above 60% encourages mold and dust mites. We install whole-home humidity control systems to keep you in that range year-round.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Should I repair or replace my AC unit?<svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-a"><p>If the repair cost exceeds 50% of the unit's value and the system is over 10 years old, replacement often makes more financial sense. We'll always give you an honest recommendation — we never push replacement when a repair makes more sense.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">What areas do you serve?<svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq-a"><p>We proudly serve Augusta, Evans, Martinez, Grovetown, and North Augusta, GA. Not sure if we cover your location? Just call us at (706) 826-0644 and we'll let you know right away.</p></div>
+        </div>
+      </div>
+      <div class="faq-cta fade-up d2">
+        <div class="tag tag-light">Still Have Questions?</div>
+        <h3>Talk to a Real Person — Not a Bot</h3>
+        <p>Our team is available 7 days a week. Call us and someone will actually pick up.</p>
+        <div class="faq-tel">(706) 826-0644</div>
+        <a href="tel:7068260644" class="btn btn-purple" style="width:100%;justify-content:center;">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.93a16 16 0 0 0 5.52 5.52l1.82-1.82a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.02z"/></svg>
+          (706) 826-0644
+        </a>
+        <a href="#booking" class="btn btn-ghost" style="width:100%;justify-content:center;border-color:rgba(255,255,255,0.22);font-size:15px;">Or Book Online Below</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ====================================================
+     BOOKING
+===================================================== -->
+<section class="booking-section section" id="booking">
+  <div class="container">
+    <div class="booking-header fade-up">
+      <div class="tag">Schedule Service</div>
+      <h2 class="section-title">Book Your Appointment<br>in Minutes</h2>
+      <p class="section-sub">Select a service, pick a time, and we'll confirm right away. Prefer to call? <strong>(706) 826-0644</strong></p>
+    </div>
+    <div class="fade-up d1">
+      <div style="width:100%;box-shadow:var(--shadow-lg);border:1px solid var(--border);margin:auto;max-width:1200px;overflow:hidden;border-radius:var(--radius-lg);">
+        <div class="zenbooker-inline-widget" data-url="https://widget.zenbooker.com/book/1722876415943x452936215138230600?embed=true" style="min-width:320px;height:600px;border:0;vertical-align:bottom;border-radius:var(--radius-lg);display:block;"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ====================================================
+     FOOTER
+===================================================== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <img src="assets/logo%20transparent%20background%20.png" alt="Giesbrecht HVAC" class="footer-logo">
+        <p class="footer-desc">Augusta's most trusted HVAC company. Fast response, expert service, and 187 five-star reviews across the CSRA.</p>
+        <a href="tel:7068260644" class="footer-tel">(706) 826-0644</a>
+        <span class="footer-tel-lbl">Call or Text Anytime</span>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">AC Repair</a></li>
+          <li><a href="#services">AC Replacement</a></li>
+          <li><a href="#services">Emergency Service</a></li>
+          <li><a href="#services">Furnace Repair</a></li>
+          <li><a href="#services">Indoor Air Quality</a></li>
+          <li><a href="#services">Humidity Control</a></li>
+          <li><a href="#services">Ductwork</a></li>
+          <li><a href="#services">Energy Audits</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Service Areas</h4>
+        <ul>
+          <li><a href="#booking">Augusta, GA</a></li>
+          <li><a href="#booking">Evans, GA</a></li>
+          <li><a href="#booking">Martinez, GA</a></li>
+          <li><a href="#booking">Grovetown, GA</a></li>
+          <li><a href="#booking">North Augusta, SC</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#booking">Book Online</a></li>
+          <li><a href="tel:7068260644">(706) 826-0644</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2025 Giesbrecht HVAC &mdash; Augusta, GA. All rights reserved.</span>
+      <span>Licensed &amp; Insured</span>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ====================================================
+     MOBILE STICKY BAR
+===================================================== -->
+<div class="mobile-bar">
+  <a href="tel:7068260644" class="mb-call">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.93a16 16 0 0 0 5.52 5.52l1.82-1.82a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.02z"/></svg>
+    (706) 826-0644
+  </a>
+  <a href="#booking" class="mb-book">Book Online</a>
+</div>
+
+
+<!-- ====================================================
+     SCRIPTS
+===================================================== -->
+<script src="https://cdn.zenbooker.com/widget/latest/zenbooker.js"></script>
+<script>
+// Scroll-triggered animations
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.07, rootMargin: '0px 0px -32px 0px' });
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+// FAQ accordion
+document.querySelectorAll('.faq-q').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  });
+});
+
+// Mobile nav toggle
+function toggleNav() {
+  const nav = document.getElementById('mobileNav');
+  const btn = document.querySelector('.hamburger');
+  nav.classList.toggle('open');
+  btn.classList.toggle('open');
+}
+function closeNav() {
+  document.getElementById('mobileNav').classList.remove('open');
+  document.querySelector('.hamburger').classList.remove('open');
+}
+
+// Smooth scroll (offset for sticky header)
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const target = document.querySelector(a.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      closeNav();
+      const offset = document.querySelector('.site-top').offsetHeight + 12;
+      window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - offset, behavior: 'smooth' });
+    }
+  });
+});
+</script>
+
+</body>
+</html>
