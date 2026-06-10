@@ -10,6 +10,11 @@
 
   gtag('config', 'AW-16508178627');
 </script>
+<script>
+  gtag('config', 'AW-16508178627/ZCUrCKjEmbwcEMOh2789', {
+    'phone_conversion_number': '(706) 826-0644'
+  });
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AC Tune-Up & Maintenance Augusta GA | Keep AC Running | Giesbrecht HVAC (706) 826-0644</title>
@@ -650,6 +655,13 @@ const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
 }, { threshold: 0.07, rootMargin: '0px 0px -32px 0px' });
 document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+// Phone conversion tracking
+document.querySelectorAll('a[href^="tel:"]').forEach(function(el) {
+  el.addEventListener('click', function() {
+    gtag('event', 'conversion', {'send_to': 'AW-16508178627/ZCUrCKjEmbwcEMOh2789'});
+  });
+});
 
 document.querySelectorAll('.faq-q').forEach(btn => {
   btn.addEventListener('click', () => {

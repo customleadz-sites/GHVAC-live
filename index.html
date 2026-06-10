@@ -10,6 +10,11 @@
 
   gtag('config', 'AW-16508178627');
 </script>
+<script>
+  gtag('config', 'AW-16508178627/ZCUrCKjEmbwcEMOh2789', {
+    'phone_conversion_number': '(706) 826-0644'
+  });
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Giesbrecht HVAC | Augusta HVAC Repair & Service | (706) 826-0644</title>
@@ -1108,6 +1113,13 @@ function closeNav() {
   document.getElementById('mobileNav').classList.remove('open');
   document.querySelector('.hamburger').classList.remove('open');
 }
+
+// Phone conversion tracking
+document.querySelectorAll('a[href^="tel:"]').forEach(function(el) {
+  el.addEventListener('click', function() {
+    gtag('event', 'conversion', {'send_to': 'AW-16508178627/ZCUrCKjEmbwcEMOh2789'});
+  });
+});
 
 // Smooth scroll (offset for sticky header)
 document.querySelectorAll('a[href^="#"]').forEach(a => {
