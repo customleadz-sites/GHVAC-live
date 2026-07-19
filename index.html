@@ -1086,6 +1086,16 @@ ul { list-style: none; }
 ===================================================== -->
 <script src="https://cdn.zenbooker.com/widget/latest/zenbooker.js"></script>
 <script>
+  // Booked Job (Zenbooker) -> Google Ads conversion, with the real booking total
+  Zenbooker.on("submission", function (e) {
+    gtag("event", "conversion", {
+      send_to: "AW-16508178627/kX6lCJLrhtMcEMOh2789",
+      value: (e && (e.total || e.booking_total)) || 1.0,
+      currency: "USD",
+    });
+  });
+</script>
+<script>
 // Scroll-triggered animations
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
