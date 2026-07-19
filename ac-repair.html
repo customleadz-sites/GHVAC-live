@@ -182,6 +182,7 @@ ul { list-style: none; }
   text-transform: uppercase; letter-spacing: 0.06em;
 }
 .badge-stars { color: var(--gold); }
+.badge-google, .badge-copy-mob { display: none; }
 .hero-cta-row { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 14px; }
 .hero-cta-divider { font-family: 'Barlow Condensed', sans-serif; font-weight: 500; font-size: 12px; color: rgba(255,255,255,0.35); text-transform: uppercase; letter-spacing: 0.1em; }
 .hero-urgency {
@@ -353,6 +354,19 @@ ul { list-style: none; }
   .conv-banner-inner { flex-direction: column; align-items: flex-start; }
   .mobile-bar { display: flex; }
   body { padding-bottom: 66px; }
+
+  /* Hero: single, larger, centered white Google-review badge */
+  .hero-badge-extra { display: none; }
+  .hero-badges { justify-content: center; margin-bottom: 24px; }
+  .hero-badge-rating {
+    background: #fff; border: 1px solid rgba(0,0,0,0.08);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+    color: #1a1a1a; font-size: 15px; letter-spacing: 0.02em;
+    padding: 12px 18px; border-radius: 10px; gap: 9px;
+  }
+  .badge-google { display: inline-flex; align-items: center; }
+  .badge-copy { display: none; }
+  .badge-copy-mob { display: inline; }
 }
 @media (max-width: 600px) {
   .trust-stats { flex-direction: column; border-left: none; }
@@ -398,9 +412,12 @@ ul { list-style: none; }
         </h1>
         <p class="hero-sub fade-up d2">When your AC goes out in Georgia heat, you need help today — not tomorrow. We diagnose fast, fix it right, and give you the price upfront before we touch a thing.</p>
         <div class="hero-badges fade-up d3">
-          <div class="hero-badge"><span class="badge-stars">★★★★★</span>&nbsp;4.9 Stars — 187 Reviews</div>
-          <div class="hero-badge">All Makes &amp; Models</div>
-          <div class="hero-badge">Upfront Pricing</div>
+          <div class="hero-badge hero-badge-rating">
+            <span class="badge-google" aria-hidden="true"><svg viewBox="0 0 48 48" width="18" height="18"><path fill="#4285F4" d="M45.1 24.5c0-1.6-.1-3.1-.4-4.5H24v8.5h11.8c-.5 2.7-2.1 5-4.4 6.6v5.5h7.1c4.2-3.8 6.6-9.5 6.6-16.1z"/><path fill="#34A853" d="M24 46c6 0 11-2 14.6-5.4l-7.1-5.5c-2 1.3-4.5 2.1-7.5 2.1-5.8 0-10.7-3.9-12.4-9.1H4.3v5.7C7.9 41 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.6 28.1c-.4-1.3-.7-2.7-.7-4.1s.2-2.8.7-4.1v-5.7H4.3C2.8 17.1 2 20.4 2 24s.8 6.9 2.3 9.8l7.3-5.7z"/><path fill="#EA4335" d="M24 10.8c3.3 0 6.2 1.1 8.5 3.3l6.3-6.3C35 4.3 30 2 24 2 15.4 2 7.9 7 4.3 14.2l7.3 5.7c1.7-5.2 6.6-9.1 12.4-9.1z"/></svg></span>
+            <span class="badge-stars">★★★★★</span>&nbsp;<span class="badge-copy">4.9 Stars — 187 Reviews</span><span class="badge-copy-mob">4.9 &middot; 187 Google Reviews</span>
+          </div>
+          <div class="hero-badge hero-badge-extra">All Makes &amp; Models</div>
+          <div class="hero-badge hero-badge-extra">Upfront Pricing</div>
         </div>
         <div class="fade-up d4">
           <div class="hero-cta-row">
