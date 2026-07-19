@@ -113,6 +113,7 @@ ul { list-style: none; }
 .hero-badges { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; }
 .hero-badge { display: flex; align-items: center; gap: 6px; padding: 7px 11px; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.13); border-radius: 6px; font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 12px; color: rgba(255,255,255,0.87); text-transform: uppercase; letter-spacing: 0.06em; }
 .badge-stars { color: var(--gold); }
+.badge-google, .badge-copy-mob { display: none; }
 .hero-cta-row { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 14px; }
 .hero-cta-divider { font-family: 'Barlow Condensed', sans-serif; font-weight: 500; font-size: 12px; color: rgba(255,255,255,0.35); text-transform: uppercase; letter-spacing: 0.1em; }
 .hero-urgency { display: flex; align-items: center; gap: 7px; font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 13px; color: rgba(255,255,255,0.60); text-transform: uppercase; letter-spacing: 0.06em; }
@@ -260,6 +261,19 @@ ul { list-style: none; }
   .conv-banner-inner { flex-direction: column; align-items: flex-start; }
   .mobile-bar { display: flex; }
   body { padding-bottom: 66px; }
+
+  /* Hero: single, larger, centered white Google-review badge */
+  .hero-badge-extra { display: none; }
+  .hero-badges { justify-content: center; margin-bottom: 24px; }
+  .hero-badge-rating {
+    background: #fff; border: 1px solid rgba(0,0,0,0.08);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+    color: #1a1a1a; font-size: 15px; letter-spacing: 0.02em;
+    padding: 12px 18px; border-radius: 10px; gap: 9px;
+  }
+  .badge-google { display: inline-flex; align-items: center; }
+  .badge-copy { display: none; }
+  .badge-copy-mob { display: inline; }
 }
 @media (max-width: 600px) {
   .trust-stats { flex-direction: column; border-left: none; }
@@ -305,9 +319,12 @@ ul { list-style: none; }
         </h1>
         <p class="hero-sub fade-up d2">Ready for a system that actually keeps up with Georgia summers? We install high-efficiency AC systems in Augusta and surrounding areas — free estimates, expert install, and a team that stands behind the work.</p>
         <div class="hero-badges fade-up d3">
-          <div class="hero-badge"><span class="badge-stars">★★★★★</span>&nbsp;4.9 Stars — 187 Reviews</div>
-          <div class="hero-badge">Free Estimates</div>
-          <div class="hero-badge">High-Efficiency Systems</div>
+          <div class="hero-badge hero-badge-rating">
+            <span class="badge-google" aria-hidden="true"><svg viewBox="0 0 48 48" width="18" height="18"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34C2.85 17.09 2 20.45 2 24s.85 6.91 2.34 9.88l7.35-5.7z"/><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/></svg></span>
+            <span class="badge-stars">★★★★★</span>&nbsp;<span class="badge-copy">4.9 Stars — 187 Reviews</span><span class="badge-copy-mob">4.9 &middot; 187 Google Reviews</span>
+          </div>
+          <div class="hero-badge hero-badge-extra">Free Estimates</div>
+          <div class="hero-badge hero-badge-extra">High-Efficiency Systems</div>
         </div>
         <div class="fade-up d4">
           <div class="hero-cta-row">
@@ -358,92 +375,6 @@ ul { list-style: none; }
     </div>
   </div>
 </div>
-
-<!-- SIGNS YOU NEED A NEW SYSTEM -->
-<section class="signs-section section">
-  <div class="container">
-    <div class="fade-up">
-      <div class="tag">Is It Time?</div>
-      <h2 class="section-title">Signs Your AC System Needs<br>to Be Replaced</h2>
-      <p class="section-sub">Sometimes repair isn't the answer. Here's how to know when a new system makes more sense.</p>
-    </div>
-    <div class="signs-grid">
-      <div class="sign-card fade-up d1">
-        <div class="sign-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
-        <h3>System Is 10+ Years Old</h3>
-        <p>The average AC lasts 10–15 years. Once you hit that window, repairs become more frequent and a new system starts making financial sense.</p>
-      </div>
-      <div class="sign-card fade-up d2">
-        <div class="sign-icon"><svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
-        <h3>Energy Bills Keep Climbing</h3>
-        <p>Aging systems lose efficiency every year. A new high-efficiency unit can cut cooling costs by 20–40% compared to an older system.</p>
-      </div>
-      <div class="sign-card fade-up d3">
-        <div class="sign-icon"><svg viewBox="0 0 24 24"><path d="M14.5 10c-.83 0-1.5-.67-1.5-1.5v-5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5z"/><path d="M20.5 10H19V8.5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/><path d="M9.5 14c.83 0 1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5S8 21.33 8 20.5v-5c0-.83.67-1.5 1.5-1.5z"/><path d="M3.5 14H5v1.5c0 .83-.67 1.5-1.5 1.5S2 16.33 2 15.5 2.67 14 3.5 14z"/><path d="M14 14.5c0-.83.67-1.5 1.5-1.5h5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5h-5c-.83 0-1.5-.67-1.5-1.5z"/><path d="M15.5 19H14v1.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5z"/><path d="M10 9.5C10 8.67 9.33 8 8.5 8h-5C2.67 8 2 8.67 2 9.5S2.67 11 3.5 11h5c.83 0 1.5-.67 1.5-1.5z"/><path d="M8.5 5H10V3.5C10 2.67 9.33 2 8.5 2S7 2.67 7 3.5 7.67 5 8.5 5z"/></svg></div>
-        <h3>Repairs Are Getting Expensive</h3>
-        <p>If a repair costs more than 50% of a new system's price, replacement is the smarter investment. We'll always give you an honest answer.</p>
-      </div>
-      <div class="sign-card fade-up d4">
-        <div class="sign-icon"><svg viewBox="0 0 24 24"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg></div>
-        <h3>Can't Keep Up in Summer Heat</h3>
-        <p>If your system runs all day and still can't reach your thermostat setting, it's undersized or worn out. A properly sized new system changes everything.</p>
-      </div>
-      <div class="sign-card fade-up d5">
-        <div class="sign-icon"><svg viewBox="0 0 24 24"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg></div>
-        <h3>Uses R-22 Refrigerant</h3>
-        <p>R-22 (Freon) is no longer manufactured and has become very expensive. If your older system uses it, a new system will cost less to maintain long-term.</p>
-      </div>
-      <div class="sign-card fade-up d6">
-        <div class="sign-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
-        <h3>Uneven Temps Room to Room</h3>
-        <p>Some rooms too hot, others too cold? This often points to an aging or improperly sized system. A new install with proper sizing fixes this for good.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- WHAT'S INCLUDED IN EVERY INSTALL -->
-<section class="included-section section">
-  <div class="container">
-    <div class="fade-up">
-      <div class="tag tag-light">Every Install Includes</div>
-      <h2 class="section-title section-title-light">What You Get With<br>a Giesbrecht Installation</h2>
-      <p class="section-sub section-sub-light">No shortcuts. No surprises. Just a complete, professional installation done right.</p>
-    </div>
-    <div class="included-grid">
-      <div class="included-item fade-up d1">
-        <div class="included-num">01</div>
-        <h3>Free In-Home Estimate</h3>
-        <p>We come out, assess your home's size and layout, and give you a detailed quote — at no cost, no obligation.</p>
-      </div>
-      <div class="included-item fade-up d2">
-        <div class="included-num">02</div>
-        <h3>Right-Sized System</h3>
-        <p>We perform a proper load calculation so your new system is the right size for your home — not too big, not too small.</p>
-      </div>
-      <div class="included-item fade-up d3">
-        <div class="included-num">03</div>
-        <h3>Professional Installation</h3>
-        <p>Certified techs handle everything — removal of the old unit, full install, electrical connections, and refrigerant charge.</p>
-      </div>
-      <div class="included-item fade-up d4">
-        <div class="included-num">04</div>
-        <h3>System Testing &amp; Startup</h3>
-        <p>We don't just install and leave. Every system is fully tested before we walk out the door.</p>
-      </div>
-      <div class="included-item fade-up d5">
-        <div class="included-num">05</div>
-        <h3>Full Walkthrough With You</h3>
-        <p>We show you how your new system works, answer all your questions, and make sure you're comfortable with everything.</p>
-      </div>
-      <div class="included-item fade-up d6">
-        <div class="included-num">06</div>
-        <h3>Manufacturer Warranty</h3>
-        <p>Every system we install comes with the full manufacturer's warranty — plus our workmanship stands behind the install.</p>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- WHY GIESBRECHT -->
 <section class="why-section section">
@@ -554,6 +485,49 @@ ul { list-style: none; }
   </div>
 </section>
 
+<!-- WHAT'S INCLUDED IN EVERY INSTALL -->
+<section class="included-section section">
+  <div class="container">
+    <div class="fade-up">
+      <div class="tag tag-light">Every Install Includes</div>
+      <h2 class="section-title section-title-light">What You Get With<br>a Giesbrecht Installation</h2>
+      <p class="section-sub section-sub-light">No shortcuts. No surprises. Just a complete, professional installation done right.</p>
+    </div>
+    <div class="included-grid">
+      <div class="included-item fade-up d1">
+        <div class="included-num">01</div>
+        <h3>Free In-Home Estimate</h3>
+        <p>We come out, assess your home's size and layout, and give you a detailed quote — at no cost, no obligation.</p>
+      </div>
+      <div class="included-item fade-up d2">
+        <div class="included-num">02</div>
+        <h3>Right-Sized System</h3>
+        <p>We perform a proper load calculation so your new system is the right size for your home — not too big, not too small.</p>
+      </div>
+      <div class="included-item fade-up d3">
+        <div class="included-num">03</div>
+        <h3>Professional Installation</h3>
+        <p>Certified techs handle everything — removal of the old unit, full install, electrical connections, and refrigerant charge.</p>
+      </div>
+      <div class="included-item fade-up d4">
+        <div class="included-num">04</div>
+        <h3>System Testing &amp; Startup</h3>
+        <p>We don't just install and leave. Every system is fully tested before we walk out the door.</p>
+      </div>
+      <div class="included-item fade-up d5">
+        <div class="included-num">05</div>
+        <h3>Full Walkthrough With You</h3>
+        <p>We show you how your new system works, answer all your questions, and make sure you're comfortable with everything.</p>
+      </div>
+      <div class="included-item fade-up d6">
+        <div class="included-num">06</div>
+        <h3>Manufacturer Warranty</h3>
+        <p>Every system we install comes with the full manufacturer's warranty — plus our workmanship stands behind the install.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- FAQ -->
 <section class="faq-section section">
   <div class="container">
@@ -594,6 +568,49 @@ ul { list-style: none; }
           (706) 826-0644
         </a>
         <a href="#booking" class="btn btn-ghost" style="border-color:rgba(255,255,255,0.22);font-size:15px;">Or Book Online Below</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SIGNS YOU NEED A NEW SYSTEM -->
+<section class="signs-section section">
+  <div class="container">
+    <div class="fade-up">
+      <div class="tag">Is It Time?</div>
+      <h2 class="section-title">Signs Your AC System Needs<br>to Be Replaced</h2>
+      <p class="section-sub">Sometimes repair isn't the answer. Here's how to know when a new system makes more sense.</p>
+    </div>
+    <div class="signs-grid">
+      <div class="sign-card fade-up d1">
+        <div class="sign-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <h3>System Is 10+ Years Old</h3>
+        <p>The average AC lasts 10–15 years. Once you hit that window, repairs become more frequent and a new system starts making financial sense.</p>
+      </div>
+      <div class="sign-card fade-up d2">
+        <div class="sign-icon"><svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+        <h3>Energy Bills Keep Climbing</h3>
+        <p>Aging systems lose efficiency every year. A new high-efficiency unit can cut cooling costs by 20–40% compared to an older system.</p>
+      </div>
+      <div class="sign-card fade-up d3">
+        <div class="sign-icon"><svg viewBox="0 0 24 24"><path d="M14.5 10c-.83 0-1.5-.67-1.5-1.5v-5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5z"/><path d="M20.5 10H19V8.5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/><path d="M9.5 14c.83 0 1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5S8 21.33 8 20.5v-5c0-.83.67-1.5 1.5-1.5z"/><path d="M3.5 14H5v1.5c0 .83-.67 1.5-1.5 1.5S2 16.33 2 15.5 2.67 14 3.5 14z"/><path d="M14 14.5c0-.83.67-1.5 1.5-1.5h5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5h-5c-.83 0-1.5-.67-1.5-1.5z"/><path d="M15.5 19H14v1.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5z"/><path d="M10 9.5C10 8.67 9.33 8 8.5 8h-5C2.67 8 2 8.67 2 9.5S2.67 11 3.5 11h5c.83 0 1.5-.67 1.5-1.5z"/><path d="M8.5 5H10V3.5C10 2.67 9.33 2 8.5 2S7 2.67 7 3.5 7.67 5 8.5 5z"/></svg></div>
+        <h3>Repairs Are Getting Expensive</h3>
+        <p>If a repair costs more than 50% of a new system's price, replacement is the smarter investment. We'll always give you an honest answer.</p>
+      </div>
+      <div class="sign-card fade-up d4">
+        <div class="sign-icon"><svg viewBox="0 0 24 24"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg></div>
+        <h3>Can't Keep Up in Summer Heat</h3>
+        <p>If your system runs all day and still can't reach your thermostat setting, it's undersized or worn out. A properly sized new system changes everything.</p>
+      </div>
+      <div class="sign-card fade-up d5">
+        <div class="sign-icon"><svg viewBox="0 0 24 24"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg></div>
+        <h3>Uses R-22 Refrigerant</h3>
+        <p>R-22 (Freon) is no longer manufactured and has become very expensive. If your older system uses it, a new system will cost less to maintain long-term.</p>
+      </div>
+      <div class="sign-card fade-up d6">
+        <div class="sign-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <h3>Uneven Temps Room to Room</h3>
+        <p>Some rooms too hot, others too cold? This often points to an aging or improperly sized system. A new install with proper sizing fixes this for good.</p>
       </div>
     </div>
   </div>

@@ -103,6 +103,7 @@ ul { list-style: none; }
 .hero-badges { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; }
 .hero-badge { display: flex; align-items: center; gap: 6px; padding: 7px 11px; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.13); border-radius: 6px; font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 12px; color: rgba(255,255,255,0.87); text-transform: uppercase; letter-spacing: 0.06em; }
 .badge-stars { color: var(--gold); }
+.badge-google, .badge-copy-mob { display: none; }
 .hero-cta-row { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 14px; }
 .hero-cta-divider { font-family: 'Barlow Condensed', sans-serif; font-weight: 500; font-size: 12px; color: rgba(255,255,255,0.35); text-transform: uppercase; letter-spacing: 0.1em; }
 .hero-urgency { display: flex; align-items: center; gap: 7px; font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 13px; color: rgba(255,255,255,0.60); text-transform: uppercase; letter-spacing: 0.06em; }
@@ -249,6 +250,19 @@ ul { list-style: none; }
   .conv-banner-inner { flex-direction: column; align-items: flex-start; }
   .mobile-bar { display: flex; }
   body { padding-bottom: 66px; }
+
+  /* Hero: single, larger, centered white Google-review badge */
+  .hero-badge-extra { display: none; }
+  .hero-badges { justify-content: center; margin-bottom: 24px; }
+  .hero-badge-rating {
+    background: #fff; border: 1px solid rgba(0,0,0,0.08);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+    color: #1a1a1a; font-size: 15px; letter-spacing: 0.02em;
+    padding: 12px 18px; border-radius: 10px; gap: 9px;
+  }
+  .badge-google { display: inline-flex; align-items: center; }
+  .badge-copy { display: none; }
+  .badge-copy-mob { display: inline; }
 }
 @media (max-width: 600px) {
   .trust-stats { flex-direction: column; border-left: none; }
@@ -293,9 +307,12 @@ ul { list-style: none; }
         </h1>
         <p class="hero-sub fade-up d2">A professional AC tune-up catches small problems before they become expensive breakdowns. Keep your system efficient, extend its life, and never get stuck without AC in Augusta heat.</p>
         <div class="hero-badges fade-up d3">
-          <div class="hero-badge"><span class="badge-stars">★★★★★</span>&nbsp;4.9 Stars — 187 Reviews</div>
-          <div class="hero-badge">Prevent Breakdowns</div>
-          <div class="hero-badge">Lower Energy Bills</div>
+          <div class="hero-badge hero-badge-rating">
+            <span class="badge-google" aria-hidden="true"><svg viewBox="0 0 48 48" width="18" height="18"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34C2.85 17.09 2 20.45 2 24s.85 6.91 2.34 9.88l7.35-5.7z"/><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/></svg></span>
+            <span class="badge-stars">★★★★★</span>&nbsp;<span class="badge-copy">4.9 Stars — 187 Reviews</span><span class="badge-copy-mob">4.9 &middot; 187 Google Reviews</span>
+          </div>
+          <div class="hero-badge hero-badge-extra">Prevent Breakdowns</div>
+          <div class="hero-badge hero-badge-extra">Lower Energy Bills</div>
         </div>
         <div class="fade-up d4">
           <div class="hero-cta-row">
@@ -347,48 +364,72 @@ ul { list-style: none; }
   </div>
 </div>
 
-<!-- WHY MAINTENANCE MATTERS -->
-<section class="why-section section">
+<!-- REVIEWS -->
+<section class="reviews-section section">
   <div class="container">
-    <div class="fade-up">
-      <div class="tag">Why It Matters</div>
-      <h2 class="section-title">What a Yearly Tune-Up<br>Does for Your Home</h2>
-      <p class="section-sub">In Augusta's climate, your AC runs hard for months straight. Regular maintenance keeps it efficient, reliable, and out of the emergency repair category.</p>
+    <div class="reviews-top fade-up">
+      <div>
+        <div class="tag">What Customers Say</div>
+        <h2 class="section-title">Augusta Homeowners Who<br>Keep Up With Maintenance</h2>
+      </div>
+      <div class="reviews-score">
+        <div class="reviews-big">4.9</div>
+        <div class="reviews-meta">
+          <span class="stars">★★★★★</span>
+          <span>Based on 187 Google Reviews</span>
+        </div>
+      </div>
     </div>
-    <div class="benefits-grid">
-      <div class="benefit-card fade-up d1">
-        <div class="benefit-icon"><svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
-        <h3>Lower Energy Bills</h3>
-        <p>A dirty, unmaintained system works harder and uses more electricity. A tune-up restores efficiency — often 5–15% savings on your monthly bill.</p>
+    <div class="reviews-grid">
+      <div class="rev-card fade-up d1">
+        <div class="rev-stars">★★★★★</div>
+        <p class="rev-text">"Giesbrecht has done our annual tune-up for 3 years running. Every time they come out, they're thorough, professional, and honest about what they find. Haven't had a single breakdown since we started using them. Worth every penny."</p>
+        <div class="rev-author">
+          <div class="rev-avatar">PW</div>
+          <div class="rev-info"><strong>Patricia W.</strong><span>Augusta, GA &middot; Google Review</span></div>
+        </div>
+        <div class="g-mark"><svg viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg></div>
       </div>
-      <div class="benefit-card fade-up d2">
-        <div class="benefit-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-        <h3>Prevent Costly Breakdowns</h3>
-        <p>Most AC failures are preventable. We catch worn parts, low refrigerant, and failing components before they turn into emergency calls in August heat.</p>
+      <div class="rev-card fade-up d2">
+        <div class="rev-stars">★★★★★</div>
+        <p class="rev-text">"I had them out for a spring tune-up and they caught a failing capacitor before it took out my whole system. Small part, cheap fix — but if it had gone during a heat wave it would have been a nightmare. Really glad I scheduled it early."</p>
+        <div class="rev-author">
+          <div class="rev-avatar">CJ</div>
+          <div class="rev-info"><strong>Chris J.</strong><span>Martinez, GA &middot; Google Review</span></div>
+        </div>
+        <div class="g-mark"><svg viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg></div>
       </div>
-      <div class="benefit-card fade-up d3">
-        <div class="benefit-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
-        <h3>Extend System Life</h3>
-        <p>Well-maintained AC systems last 15+ years. Skipping maintenance is the #1 reason systems fail before their time — costing you an early replacement.</p>
-      </div>
-      <div class="benefit-card fade-up d4">
-        <div class="benefit-icon"><svg viewBox="0 0 24 24"><path d="M2 12h20M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10"/><path d="M8 12a4 4 0 018 0"/></svg></div>
-        <h3>Better Air Quality</h3>
-        <p>Dirty coils and filters circulate dust, allergens, and mold spores through your home. A tune-up includes a thorough cleaning that improves the air your family breathes.</p>
-      </div>
-      <div class="benefit-card fade-up d5">
-        <div class="benefit-icon"><svg viewBox="0 0 24 24"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg></div>
-        <h3>Stay Cool All Summer</h3>
-        <p>A properly tuned AC reaches your thermostat setting faster, holds the temperature better, and handles Georgia heat the way it's supposed to.</p>
-      </div>
-      <div class="benefit-card fade-up d6">
-        <div class="benefit-icon"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
-        <h3>Protect Your Warranty</h3>
-        <p>Many manufacturer warranties require annual maintenance to stay valid. We provide documentation of the service so you're covered if you ever need to make a claim.</p>
+      <div class="rev-card fade-up d3">
+        <div class="rev-stars">★★★★★</div>
+        <p class="rev-text">"After years of struggling with high humidity in our home, they came out for a tune-up and identified that our system was undersized and running constantly. Their explanation was clear, their recommendations were honest, and our home feels completely different now."</p>
+        <div class="rev-author">
+          <div class="rev-avatar">DK</div>
+          <div class="rev-info"><strong>David K.</strong><span>Augusta, GA &middot; Google Review</span></div>
+        </div>
+        <div class="g-mark"><svg viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg></div>
       </div>
     </div>
   </div>
 </section>
+
+<!-- CONV BANNER -->
+<div class="conv-banner">
+  <div class="container">
+    <div class="conv-banner-inner fade-up">
+      <div>
+        <h2>Don't Wait for a Breakdown.<br>Schedule Your Tune-Up Today.</h2>
+        <p>A $100 tune-up can prevent a $1,000+ repair. Don't find that out the hard way.</p>
+      </div>
+      <div class="conv-banner-actions">
+        <a href="tel:7068260644" class="btn btn-white" style="font-size:17px;padding:16px 28px;">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.93a16 16 0 0 0 5.52 5.52l1.82-1.82a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.02z"/></svg>
+          (706) 826-0644
+        </a>
+        <a href="#booking" class="btn btn-ghost" style="font-size:17px;padding:16px 28px;">Book Online &rarr;</a>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- WHAT'S INCLUDED IN A TUNE-UP -->
 <section class="tuneup-section section">
@@ -459,115 +500,6 @@ ul { list-style: none; }
   </div>
 </section>
 
-<!-- WHEN TO SCHEDULE -->
-<section class="when-section section">
-  <div class="container">
-    <div class="when-layout">
-      <div class="when-img-wrap fade-up">
-        <img src="assets/service%20call%202.webp" alt="Giesbrecht HVAC technician performing maintenance" class="when-img">
-        <div class="when-badge">
-          <span class="when-badge-num">4.9</span>
-          <span class="when-badge-label">★ Star Rating<br>187 Reviews</span>
-        </div>
-      </div>
-      <div class="fade-up d2">
-        <div class="tag">When to Schedule</div>
-        <h2 class="section-title">The Best Time to Tune<br>Up Your AC in Augusta</h2>
-        <p class="section-sub">Timing your maintenance right means you're covered before the hottest months — not scrambling during them.</p>
-        <div class="when-points">
-          <div class="when-point">
-            <div class="wp-icon"><svg viewBox="0 0 24 24"><path d="M8 6l4-4 4 4"/><path d="M12 2v10.3a4 4 0 01-1.172 2.872L4 22"/><path d="M20 22l-5-5"/></svg></div>
-            <div class="wp-text"><strong>Spring (March–May)</strong><span>The ideal window — before the heat hits. Get your tune-up done while appointment slots are available and avoid the summer rush.</span></div>
-          </div>
-          <div class="when-point">
-            <div class="wp-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></div>
-            <div class="wp-text"><strong>Before a Heat Wave</strong><span>If it's been over a year since your last tune-up and temperatures are climbing, don't wait. Call us now.</span></div>
-          </div>
-          <div class="when-point">
-            <div class="wp-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
-            <div class="wp-text"><strong>When You Move Into a Home</strong><span>Don't assume the previous owner kept up on maintenance. A tune-up tells you exactly what condition the system is in.</span></div>
-          </div>
-          <div class="when-point">
-            <div class="wp-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
-            <div class="wp-text"><strong>Once Every Year — Minimum</strong><span>HVAC manufacturers and energy experts recommend annual maintenance. It's the single best thing you can do to protect your investment.</span></div>
-          </div>
-        </div>
-        <div class="when-actions">
-          <a href="tel:7068260644" class="btn btn-purple">(706) 826-0644</a>
-          <a href="#booking" class="btn btn-navy">Book Online &rarr;</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CONV BANNER -->
-<div class="conv-banner">
-  <div class="container">
-    <div class="conv-banner-inner fade-up">
-      <div>
-        <h2>Don't Wait for a Breakdown.<br>Schedule Your Tune-Up Today.</h2>
-        <p>A $100 tune-up can prevent a $1,000+ repair. Don't find that out the hard way.</p>
-      </div>
-      <div class="conv-banner-actions">
-        <a href="tel:7068260644" class="btn btn-white" style="font-size:17px;padding:16px 28px;">
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.93a16 16 0 0 0 5.52 5.52l1.82-1.82a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.02z"/></svg>
-          (706) 826-0644
-        </a>
-        <a href="#booking" class="btn btn-ghost" style="font-size:17px;padding:16px 28px;">Book Online &rarr;</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- REVIEWS -->
-<section class="reviews-section section">
-  <div class="container">
-    <div class="reviews-top fade-up">
-      <div>
-        <div class="tag">What Customers Say</div>
-        <h2 class="section-title">Augusta Homeowners Who<br>Keep Up With Maintenance</h2>
-      </div>
-      <div class="reviews-score">
-        <div class="reviews-big">4.9</div>
-        <div class="reviews-meta">
-          <span class="stars">★★★★★</span>
-          <span>Based on 187 Google Reviews</span>
-        </div>
-      </div>
-    </div>
-    <div class="reviews-grid">
-      <div class="rev-card fade-up d1">
-        <div class="rev-stars">★★★★★</div>
-        <p class="rev-text">"Giesbrecht has done our annual tune-up for 3 years running. Every time they come out, they're thorough, professional, and honest about what they find. Haven't had a single breakdown since we started using them. Worth every penny."</p>
-        <div class="rev-author">
-          <div class="rev-avatar">PW</div>
-          <div class="rev-info"><strong>Patricia W.</strong><span>Augusta, GA &middot; Google Review</span></div>
-        </div>
-        <div class="g-mark"><svg viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg></div>
-      </div>
-      <div class="rev-card fade-up d2">
-        <div class="rev-stars">★★★★★</div>
-        <p class="rev-text">"I had them out for a spring tune-up and they caught a failing capacitor before it took out my whole system. Small part, cheap fix — but if it had gone during a heat wave it would have been a nightmare. Really glad I scheduled it early."</p>
-        <div class="rev-author">
-          <div class="rev-avatar">CJ</div>
-          <div class="rev-info"><strong>Chris J.</strong><span>Martinez, GA &middot; Google Review</span></div>
-        </div>
-        <div class="g-mark"><svg viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg></div>
-      </div>
-      <div class="rev-card fade-up d3">
-        <div class="rev-stars">★★★★★</div>
-        <p class="rev-text">"After years of struggling with high humidity in our home, they came out for a tune-up and identified that our system was undersized and running constantly. Their explanation was clear, their recommendations were honest, and our home feels completely different now."</p>
-        <div class="rev-author">
-          <div class="rev-avatar">DK</div>
-          <div class="rev-info"><strong>David K.</strong><span>Augusta, GA &middot; Google Review</span></div>
-        </div>
-        <div class="g-mark"><svg viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg></div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- FAQ -->
 <section class="faq-section section">
   <div class="container">
@@ -608,6 +540,91 @@ ul { list-style: none; }
           (706) 826-0644
         </a>
         <a href="#booking" class="btn btn-ghost" style="border-color:rgba(255,255,255,0.22);font-size:15px;">Or Book Online Below</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY MAINTENANCE MATTERS -->
+<section class="why-section section">
+  <div class="container">
+    <div class="fade-up">
+      <div class="tag">Why It Matters</div>
+      <h2 class="section-title">What a Yearly Tune-Up<br>Does for Your Home</h2>
+      <p class="section-sub">In Augusta's climate, your AC runs hard for months straight. Regular maintenance keeps it efficient, reliable, and out of the emergency repair category.</p>
+    </div>
+    <div class="benefits-grid">
+      <div class="benefit-card fade-up d1">
+        <div class="benefit-icon"><svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+        <h3>Lower Energy Bills</h3>
+        <p>A dirty, unmaintained system works harder and uses more electricity. A tune-up restores efficiency — often 5–15% savings on your monthly bill.</p>
+      </div>
+      <div class="benefit-card fade-up d2">
+        <div class="benefit-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h3>Prevent Costly Breakdowns</h3>
+        <p>Most AC failures are preventable. We catch worn parts, low refrigerant, and failing components before they turn into emergency calls in August heat.</p>
+      </div>
+      <div class="benefit-card fade-up d3">
+        <div class="benefit-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <h3>Extend System Life</h3>
+        <p>Well-maintained AC systems last 15+ years. Skipping maintenance is the #1 reason systems fail before their time — costing you an early replacement.</p>
+      </div>
+      <div class="benefit-card fade-up d4">
+        <div class="benefit-icon"><svg viewBox="0 0 24 24"><path d="M2 12h20M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10"/><path d="M8 12a4 4 0 018 0"/></svg></div>
+        <h3>Better Air Quality</h3>
+        <p>Dirty coils and filters circulate dust, allergens, and mold spores through your home. A tune-up includes a thorough cleaning that improves the air your family breathes.</p>
+      </div>
+      <div class="benefit-card fade-up d5">
+        <div class="benefit-icon"><svg viewBox="0 0 24 24"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg></div>
+        <h3>Stay Cool All Summer</h3>
+        <p>A properly tuned AC reaches your thermostat setting faster, holds the temperature better, and handles Georgia heat the way it's supposed to.</p>
+      </div>
+      <div class="benefit-card fade-up d6">
+        <div class="benefit-icon"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+        <h3>Protect Your Warranty</h3>
+        <p>Many manufacturer warranties require annual maintenance to stay valid. We provide documentation of the service so you're covered if you ever need to make a claim.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHEN TO SCHEDULE -->
+<section class="when-section section">
+  <div class="container">
+    <div class="when-layout">
+      <div class="when-img-wrap fade-up">
+        <img src="assets/service%20call%202.webp" alt="Giesbrecht HVAC technician performing maintenance" class="when-img">
+        <div class="when-badge">
+          <span class="when-badge-num">4.9</span>
+          <span class="when-badge-label">★ Star Rating<br>187 Reviews</span>
+        </div>
+      </div>
+      <div class="fade-up d2">
+        <div class="tag">When to Schedule</div>
+        <h2 class="section-title">The Best Time to Tune<br>Up Your AC in Augusta</h2>
+        <p class="section-sub">Timing your maintenance right means you're covered before the hottest months — not scrambling during them.</p>
+        <div class="when-points">
+          <div class="when-point">
+            <div class="wp-icon"><svg viewBox="0 0 24 24"><path d="M8 6l4-4 4 4"/><path d="M12 2v10.3a4 4 0 01-1.172 2.872L4 22"/><path d="M20 22l-5-5"/></svg></div>
+            <div class="wp-text"><strong>Spring (March–May)</strong><span>The ideal window — before the heat hits. Get your tune-up done while appointment slots are available and avoid the summer rush.</span></div>
+          </div>
+          <div class="when-point">
+            <div class="wp-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></div>
+            <div class="wp-text"><strong>Before a Heat Wave</strong><span>If it's been over a year since your last tune-up and temperatures are climbing, don't wait. Call us now.</span></div>
+          </div>
+          <div class="when-point">
+            <div class="wp-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+            <div class="wp-text"><strong>When You Move Into a Home</strong><span>Don't assume the previous owner kept up on maintenance. A tune-up tells you exactly what condition the system is in.</span></div>
+          </div>
+          <div class="when-point">
+            <div class="wp-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+            <div class="wp-text"><strong>Once Every Year — Minimum</strong><span>HVAC manufacturers and energy experts recommend annual maintenance. It's the single best thing you can do to protect your investment.</span></div>
+          </div>
+        </div>
+        <div class="when-actions">
+          <a href="tel:7068260644" class="btn btn-purple">(706) 826-0644</a>
+          <a href="#booking" class="btn btn-navy">Book Online &rarr;</a>
+        </div>
       </div>
     </div>
   </div>
